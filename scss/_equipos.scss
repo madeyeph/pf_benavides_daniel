@@ -1,0 +1,50 @@
+.equipo{
+    display: flex;
+    flex-direction: row;
+    .card{
+        h2{
+            text-align: center;
+            font-family: $fuentePrincipal;
+            font-size: 30px;
+        }
+        p{
+            text-align: center;
+            font-family: $fuenteSecundaria;
+            font-size: 15px;
+        }
+        a{
+            padding: 10px;
+            text-decoration: none;
+            font-family: $fuentePrincipal;
+            font-weight: bold;
+            color: $colorBlanco;
+            background-color: $colorPrimario;
+            border: none;
+            border-radius: 10px;
+            &:hover{
+                color:$colorterciario;
+            }
+        }
+    }
+    @media (max-width: 430px){
+        .equipo{
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+        }
+    }
+    .info_equipo{
+        @extend %estiloEquipo;
+        @media (max-width: 430px){
+            div{
+                flex-direction: column;
+                align-items: center;
+                img{
+                    width: 100%;
+                    max-width: 400px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
